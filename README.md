@@ -37,4 +37,4 @@ Users should be able to:
 
 - Website - [Odezime Excel](https://https://master-x2000.github.io/testimonial-grid/)
 - Frontend Mentor - [@Master-x2000](https://www.frontendmentor.io/profile/master-x2000)
-- Twitter - [@Odezime Excel](https://www.twitter.com/yourusername)
+- Twitter - [@Odezime Excel](https://www.twitter.com/EOdezime66661)
