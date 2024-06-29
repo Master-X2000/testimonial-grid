@@ -1,0 +1,219 @@
+/* || FONT */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+/* || RESETS */
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+
+img,
+svg,
+canvas{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/* || VARIABLES */
+:root{
+    --FIRST-CLR: hsl(263, 55%, 52%);
+    --FIRST-HSL: 263, 55%, 52%;
+    --SECOND-CLR: hsl(217, 19%, 35%);
+    --SECOND-HSL:217, 19%, 35%;
+    --FOURTH-CLR: hsl(219, 29%, 14%);
+    --FOURTH-HSL: 219, 29%, 14%;
+    --WHITE-CLR: hsl(0, 0%, 100%);
+    --WHITE-HSL:0, 0%, 100%;
+    --NAME-CLR-OTHER: hsl(0, 0%, 81%);
+    --NAME-HSL-OTHER: 0, 0%, 81%;
+    --NAME-HSL-WHITE: 219, 29%, 14%;
+    --BG-CLR: hsl(210, 46%, 95%);
+}
+
+/* || STYLES */
+body{
+    min-height:100svh;
+    display:grid;
+    place-content:center;
+    background-color: var(--BG-CLR);
+    font-family: 'Barlow Semi Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    margin:1rem;
+    display:grid;
+    place-content: center;
+    gap:1rem;
+}
+
+.first{
+    background-color: var(--FIRST-CLR);
+}
+
+.second{
+    background-color: var(--SECOND-CLR);
+}
+
+.third{
+    background-color: var(--WHITE-CLR);
+}
+
+.fourth{
+    background-color: var(--FOURTH-CLR);
+}
+
+.first{
+    background-color: var(--FIRST-CLR);
+}
+
+.fifth{
+    background-color: var(--WHITE-CLR);
+}
+
+.third,
+.fifth{
+    box-shadow: 75px 7px 15px 2px hsla(var(--FOURTH-HSL), 0.1);
+}
+
+.card{
+    border-radius:10px;
+    padding:1.5rem;
+    display:grid;
+    gap:0.5rem;
+}
+
+.top{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1rem;
+}
+
+.identity{
+    line-height:1;
+}
+
+.top img{
+    height:56px;
+    width:56px;
+    border-radius:50%;
+}
+.one_img{
+    border:2px solid rgba(255, 255, 255, 0.5)
+}
+
+.four_img{
+    border:2px solid  hsla(var(--FIRST-HSL), 0.7);
+}
+
+.two_img,
+.three_img,
+.five_img{
+    border:2px solid hsla(var(--SECOND-HSL), 0.2);
+}
+
+.name{
+    font-size:15px;
+    font-weight:500;
+}
+
+.name_one,
+.name_two,
+.name_four{
+    color:var(--NAME-CLR-OTHER);
+}
+
+.name_three,
+.name_five{
+    color:var(--FOUR-CLR);
+}
+
+.verified{
+    font-size:13px;
+    font-weight:400;
+}
+
+.verified_one,
+.verified_two,
+.verified_four{
+    color:hsla(var(--NAME-HSL-OTHER), 0.5);
+}
+
+.verified_three,
+.verified_five{
+    color:hsla(var(--FOURTH-HSL), 0.5);
+}
+
+h4{
+    font-size:1.4rem;
+    font-weight:600;
+    line-height:1.2;
+}
+
+.one_h4,
+.two_h4,
+.four_h4{
+    color:var(--WHITE-CLR);
+}
+
+.three_h4,
+.five_h4{
+    color:var(--FOURTH-CLR);
+}
+
+.info{
+    font-size:13px;
+    font-weight:500;
+    line-height:1.4;
+}
+
+.one_p,
+.two_p,
+.four_p{
+    color:hsla(var(--NAME-HSL-OTHER), 0.7);
+}
+
+.three_p,
+.five_p{
+    color:hsla(var(--FOURTH-HSL), 0.5);
+}
+
+/* || MEDIA QUARY */
+@media (min-width:750px){
+    main{
+        max-width:75rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "one one two five"
+        "three four four five";
+    }
+
+    .first{
+        grid-area: one;       
+    }
+
+    .second{
+        grid-area:two;
+    }
+
+    .third{
+        grid-area:three;
+    }
+
+    .fourth{
+        grid-area:four;
+    }
+
+    .fifth{
+        grid-area:five;
+    }
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
